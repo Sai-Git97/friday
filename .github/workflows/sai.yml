@@ -1,17 +1,20 @@
 name: while loop example
-on: 
+
+on:
   push:
-    branches: 
+    branches:
       - main
+
 jobs:
   while-job:
     runs-on: ubuntu-latest
     steps:
       - name: run while loop
         run: |
-          count=1 while [ $count -le 5 ] do
-          echo "Count is $count"
-          sleep 1
-          count=$((count + 1))
+          count=1
+          while [ $count -le 5 ]
+          do
+            echo "Count is $count"
+            sleep 1
+            count=$((count + 1))
           done
-        

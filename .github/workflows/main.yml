@@ -1,0 +1,11 @@
+name: run date
+on: 
+  push:
+    branches: 
+      - main
+jobs:
+  show-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print run date
+        run: echo "run started at: ${{ github.run_started_at }}"

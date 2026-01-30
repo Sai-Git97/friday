@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print run date
-        run: echo "Run started at: $(date -u)"
+        run: |
+           echo "Run started at: $(date -u)"

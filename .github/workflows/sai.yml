@@ -1,14 +1,17 @@
-name: run date
+name: while loop example
 on: 
   push:
     branches: 
       - main
 jobs:
-  show-date:
+  while-job:
     runs-on: ubuntu-latest
     steps:
-      - name: print run date
+      - name: run while loop
         run: |
-           echo "UTC time: $(date -u)"
-           echco "Local time: $(date)"
+          count=1 while [ $count -le 5 ] do
+          echo "Count is $count"
+          sleep 1
+          count=$((count + 1))
+          done
         

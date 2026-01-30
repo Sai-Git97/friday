@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print run date
-        run: echo "run started at: ${{ github.run_started_at }}"
+        run: echo "Run started at: $(date -u)"

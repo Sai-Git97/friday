@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: print run date
         run: |
-           echo "Run started at: $(date -u)"
+           echo "UTC time: $(date -u)"
            echco "Local time: $(date)"
         
